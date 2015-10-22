@@ -30,6 +30,9 @@ COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
 RUN gem install coffee-rails --no-document
-# need export GEM_HOME='/usr/local/bundle'
+# need export GEM_HOME='/usr/local/bundlbe'
+
+# make it possible to deploy the built files
+RUN apt-get install -y awscli
 
 CMD ["/usr/sbin/sshd", "-D"]
