@@ -22,8 +22,8 @@ RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
-RUN mkdir -p /usr/local/cucumber && mkdir -p /home/jenkins
-WORKDIR /usr/local/cucumber
+RUN mkdir -p /usr/local/web-reader && mkdir -p /home/jenkins
+WORKDIR /usr/local/web-reader
 
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
