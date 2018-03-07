@@ -15,4 +15,6 @@ RUN gem install coffee-rails --no-document
 # need export GEM_HOME='/usr/local/bundlbe'
 
 # make it possible to deploy the built files
-RUN apt-get install -y awscli
+RUN apt-get install -qy python-pip \
+    && pip install awscli
+
