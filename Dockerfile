@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.0
 
 # Set up our Ruby environment - from ruby:2.0-onbuild
 # throw errors if Gemfile has been modified since Gemfile.lock
