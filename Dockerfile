@@ -27,6 +27,6 @@ RUN gem install coffee-rails --no-document
 
 # make it possible to deploy the built files
 RUN apt-get update \
-    && apt-get install -qy python-dev python-pip \
+    && apt-get install -qy python-dev python-pip node.js zip \
     && pip install awscli
 
