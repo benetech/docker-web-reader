@@ -1,4 +1,15 @@
+ARG JAVA_UPDATE=144
+
+FROM 814633283276.dkr.ecr.us-east-1.amazonaws.com/java:8u${JAVA_UPDATE}-jre as JRE
+ARG JAVA_UPDATE
 FROM ruby:2.1
+ARG JAVA_UPDATE
+
+ARG JRE_PATH=/opt/jre1.8.0_${JAVA_UPDATE}
+
+COPY --from=JRE $JRE_PATH $JRE_PATH
+
+ENV PATH=${JRE_PATH}/bin:$PATH
 
 # Set up our Ruby environment - from ruby:2.0-onbuild
 # throw errors if Gemfile has been modified since Gemfile.lock
