@@ -22,4 +22,4 @@ gem 'growl'
 
 # for generating docs
 gem 'coffee-script'
-
+gem 'coffee-rails', "4.1.1"
