@@ -10,7 +10,7 @@ gem 'rack'
 
 # for le styles
 gem 'sass'
-gem 'bourbon'
+gem 'bourbon', '4.1.0'
 
 # for running tests
 gem 'jasmine'
@@ -22,4 +22,5 @@ gem 'growl'
 
 # for generating docs
 gem 'coffee-script'
-gem 'coffee-rails', "4.1.1"
+gem 'coffee-rails', "4.1.0"
+gem 'thor', '0.18.1'
